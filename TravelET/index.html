@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 
     <title>Travel</title>
   </head>
   <body>
     <div class="header">
         <nav>
-            <div class="header__row header__logo">
+            <div class="header__logo">
                 <img src="images/logo.png" alt="">
             </div>
-            <div class="header__row header__navbar">
+            <div class="header__navbar">
                 <ul class="nav__links">
                     <li class="nav__link">
                         <a href="">Popular places</a>
@@ -27,11 +28,48 @@
                     </li>
                 </ul>
             </div>
-            <div class="header__row">
-                <a href="#">registry now</a>
+            <div class="header__register">
+                <a class="register-btn" href="#">registry now</a>
             </div>
         </nav>
+        <div class="header__container">
+            <h1>Find Your Next Way</h1>
+            <div class="header__search-bar">
+                <form>
+                    <div>
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="Where do you want to go ?" style="width: 160px;">
+                    </div>
+                    <div>
+                        <label for="check-in">Check in</label>
+                        <input type="date" id="check-in" placeholder="Add dates">
+                    </div>
+                    <div>
+                        <label for="check-out">Check out</label>
+                        <input type="date" id="check-out" placeholder="Add dates">
+                    </div>
+                    <div>
+                        <label for="guess">Guess</label>
+                        <input type="number" id="guess" placeholder="Add guesses">
+                    </div>
+                    <button type="submit"><img src="images/search.png"></button>
+                </form>
+            </div>
+            
+        </div>
         <!-- <img src="images/banner.png" alt="sth sth"> -->
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2>Exclusive</h2>
+            <div class="Exclusives">
+                <div><img src="images/image-s1.png"></div>
+                <div><img src="images/image-s2.png"></div>
+                <div><img src="images/image-s3.png"></div>
+                <div><img src="images/image-s4.png"></div>
+                <div><img src="images/image-s5.png"></div>
+            </div>
+        </div>
     </div>
   </body>
 </html>
