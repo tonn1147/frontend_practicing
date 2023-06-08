@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+*{
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -115,4 +119,43 @@ nav {
   font-weight: 600;
 }
 
+/*------------ exclusive ------------*/
+.main {
 
+}
+
+.main .container{
+  margin: 50px 5% 20px;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #333;
+}
+
+.sub-title {
+  margin-top: 50px;
+}
+
+.exclusives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.exclusives img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.exclusives div {
+  position: relative;
+  cursor: pointer;
+}
+
+.exclusives div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center  ;
+}
