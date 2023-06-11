@@ -159,3 +159,133 @@ nav {
   color: #fff;
   text-align: center  ;
 }
+
+/*------------ Trending ------------*/
+
+.trending {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.trending div {
+  cursor: pointer;
+}
+
+.trending div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trending h3 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/*------------ CTA ------------*/
+
+.cta {
+  margin: 80px 0;
+  background-image: linear-gradient(to right, #3f2321,transparent), url('images/banner-2.png');
+  background-size: cover;
+  border-radius: 5px;
+  color: #fff;
+  background-position: center;
+  padding: 5%;
+}
+
+.cta h3 {
+  font-weight: 500;
+  font-size: 4vw;
+  line-height: 5.3vw;
+}
+
+.cta p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.cta a {
+  text-decoration: none;
+  background: #ff5361;
+  color: #fff;
+  padding: 12px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/*------------ Stories ------------*/
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.stories .story {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.stories .story img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.stories .story p {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%,-50%);
+  font-size: large;
+  font-weight: 500;
+}
+
+.container .start-btn {
+  text-align: center;
+  display: block;
+  margin: 60px auto;
+  width: 50%;
+  max-width: 350px;
+  text-decoration: none;
+  color: #fff;
+  background: #ff5361;
+  border-radius: 30px;
+  padding: 20px;
+  font-size: large;
+}
+
+/*------------ Footer ------------*/
+
+/*------------ nav-bar activate ------------*/
+
+.nav__link--active {
+  position: relative;
+  /* transition: transform 1s; */
+}
+
+.nav__link--active::after{
+  content: "";
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 2px;
+}
+
+
+/*------------ small screen ------------*/
+@media only screen and (max-width: 720px) { 
+  .header__logo {
+    
+  }
+}
