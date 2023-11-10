@@ -13,6 +13,7 @@ body {
 
 .header {
   min-height: 100vh;
+  position: relative;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -27,11 +28,16 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 7%;
+  position: relative;
 }
 
 .header__logo {
   cursor: pointer;
   width: 140px;
+}
+
+.header__logo img {
+  width: 160px;
 }
 
 .nav__links .nav__link {
@@ -53,6 +59,24 @@ nav {
   border-radius: 20px;
   padding: 10px 25px;
   background-color: white;
+}
+
+.header__toggle--btn {
+  position: absolute;
+  right: 1rem;
+  top: 33px;
+  width: 30px;
+  height: 27px;
+  display: none;  
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__toggle--btn .bar {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
 }
 
 .header__container {
@@ -284,8 +308,79 @@ nav {
 
 
 /*------------ small screen ------------*/
-@media only screen and (max-width: 720px) { 
-  .header__logo {
+@media only screen and (max-width: 820px) { 
+  /* .header__logo {
+    position: fixed;
+    top: 4%;
+    left: 7%;
+  }
+
+  nav {
+    position: fixed;
+    background: #000;
+    top: 0;
+    z-index: 100;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    padding: 100px 7% 0;
+  }
+
+  nav .nav__links .nav__link {
+    margin: 10px 0;
+    display: block;
+
+  }
+
+  .register-btn {
+    margin: 15px 0 30px;
+    display: inline-block;
+  } */
+
+  .header__toggle--btn {
+    display: flex;
+  }
+
+  .header__navbar {
+    position: relative;
+  }
+
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #000;
+    z-index: 1;
     
   }
+
+  nav .header__navbar {
+    width: 100%;
+  }
+
+  nav .header__navbar .nav__links {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+    
+  nav .header__navbar .nav__links .nav__link {
+      text-align: center;
+  }
+
+  .header__register {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 15px;
+  }
+
+  .header__register--hidden {
+    display: none;
+  }
+
+  .header__navbar--hidden {
+    display: none;
+  }
+  
 }
