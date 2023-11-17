@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap");
+    </style>
+    <title>Account - RedStore</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
+        <nav>
+          <ul id="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Product</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="info.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <img src="../img/cart.png" alt="cart" width="30px" height="30px" />
+        <img
+          src="../img/menu.png"
+          alt="menu"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+    <!--cart items detail-->
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="../img/image1.png" alt="" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span><a href="account.html">Login</a></span>
+                <span><a href="register.html">Register</a></span>
+              </div>
+              <form action="" id="login-form">
+                <input id="email" type="text" placeholder="Email" />
+                <input id="password" type="password" placeholder="Password" />
+                <button type="submit" class="btn">Login</button>
+                <a href="">Forgot password</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for Android and ios devices</p>
+          <div class="app-logo">
+            <img src="../img/play-store.png" alt="app" />
+            <img src="../img/app-store.png" alt="app" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="../img/logo-white.png" alt="logo" />
+          <p>
+            Our purpose is to sustainably make the pleasure and benefits
+            <br />of sports accessible to the many.
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Spot</li>
+            <li>Return policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+            <li>Instagram</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/05eb404d42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var menuItems = document.getElementById("menu-items");
+
+      menuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (menuItems.style.maxHeight == "0px") {
+          menuItems.style.maxHeight = "200px";
+        } else {
+          menuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <script>
+      const account = {
+        email: "tran@gmail.com",
+        username: "trantonanh",
+        password: "123",
+      };
+
+      const loginForm = document.getElementById("login-form");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        if (!email || !password) {
+          alert("Missing email or password!");
+          return;
+        }
+        if (email === account.email && password === account.password) {
+          alert("login successful");
+          window.location.href = "index.html";
+        } else {
+          alert("incorrect email or password");
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap");
+    </style>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #ff4500;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+    <title>Product detail - RedStore</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
+        <nav>
+          <ul id="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Product</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="info.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <img src="../img/cart.png" alt="cart" width="30px" height="30px" />
+        <img
+          src="../img/menu.png"
+          alt="menu"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+    <!--contact detail-->
+    <div class="container">
+      <div class="contact-form">
+        <h2>Let us contact you</h2>
+        <form action="#" method="post" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for Android and ios devices</p>
+          <div class="app-logo">
+            <img src="../img/play-store.png" alt="app" />
+            <img src="../img/app-store.png" alt="app" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="../img/logo-white.png" alt="logo" />
+          <p>
+            Our purpose is to sustainably make the pleasure and benefits
+            <br />of sports accessible to the many.
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Spot</li>
+            <li>Return policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+            <li>Instagram</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/05eb404d42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var menuItems = document.getElementById("menu-items");
+
+      menuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (menuItems.style.maxHeight == "0px") {
+          menuItems.style.maxHeight = "200px";
+        } else {
+          menuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

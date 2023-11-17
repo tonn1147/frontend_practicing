@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap");
+    </style>
+    <style>
+        /* Add these styles for the order complete card */
+        .order-complete {
+          background-color: #f2f2f2;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          margin-top: 100px;
+          margin-bottom: 100px;
+        }
+      
+        .order-complete h2 {
+          color: #333;
+        }
+      
+        .order-complete p {
+          color: #555;
+          margin: 10px 0;
+        }
+      
+        .order-complete strong {
+          color: #000;
+        }
+      </style>
+    <title>Order completed - RedStore</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
+        <nav>
+            <ul id="menu-items">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Product</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="info.html">Contact</a></li>
+              <li><a href="account.html">Account</a></li>
+            </ul>
+          </nav>
+        <img src="../img/cart.png" alt="cart" width="30px" height="30px" />
+        <img
+          src="../img/menu.png"
+          alt="menu"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+    <!--order complete-->
+    <div class="order-complete">
+        <h2>Your Order is Complete!</h2>
+        <p>Thank you for shopping with us. Your order has been successfully processed.</p>
+        <p>Order Number: <strong>#123456</strong></p>
+        <p>Estimated Delivery Date: <strong>November 15, 2023</strong></p>
+        <p>Payment Method: <strong>Credit Card</strong></p>
+        <p>Total Amount: <strong>$230.00</strong></p>
+      </div>
+    <!--footer-->
+    <div class="footer">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for Android and ios devices</p>
+          <div class="app-logo">
+            <img src="../img/play-store.png" alt="app" />
+            <img src="../img/app-store.png" alt="app" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="../img/logo-white.png" alt="logo" />
+          <p>
+            Our purpose is to sustainably make the pleasure and benefits
+            <br />of sports accessible to the many.
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Spot</li>
+            <li>Return policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+            <li>Instagram</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/05eb404d42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var menuItems = document.getElementById("menu-items");
+
+      menuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (menuItems.style.maxHeight == "0px") {
+          menuItems.style.maxHeight = "200px";
+        } else {
+          menuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
